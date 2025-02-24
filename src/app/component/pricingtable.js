@@ -3,15 +3,14 @@
 import React from 'react';
 
 const PricingTable = () => {
+ 
   return (
-    <div className="container mx-auto p-6 max-w-full text-center bg-white">
+    <div className="container mx-auto p-6 max-w-6xl text-center bg-white">
       <h1 className="text-3xl font-bold text-[#3d226d]">Pick your perfect plan</h1>
       <p className="text-gray-600 mt-2">
         Get started in complete confidence. Our 30-day money-back guarantee means it's risk-free.
       </p>
-      
-      {/* Pricing Plans */}
-      <div className="grid md:grid-cols-3 gap-6 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
         {plans.map((plan, index) => (
           <div key={index} className={`p-6 border rounded-lg shadow-lg transform hover:scale-105 transition duration-300 ${plan.popular ? 'border-[#3d226d]' : 'border-gray-300'}`}>
             <h2 className="text-2xl font-semibold text-gray-800">{plan.name}</h2>
@@ -20,8 +19,6 @@ const PricingTable = () => {
               <span className="text-gray-500 line-through">{plan.originalPrice}</span>
               <span className="text-xl font-bold text-[#3d226d] ml-2">{plan.discountedPrice}/mo</span>
             </div>
-            <p className="text-sm text-gray-500">For 48-month term</p>
-            <p className="text-[#3d226d] font-semibold">+2 months free</p>
             <button className="mt-4 px-4 py-2 bg-[#3d226d] text-white rounded-lg hover:bg-opacity-80 transition">Choose plan</button>
             <ul className="text-left mt-4 space-y-2">
               {plan.features.map((feature, i) => (
@@ -31,28 +28,11 @@ const PricingTable = () => {
           </div>
         ))}
       </div>
-      
-      {/* Categories Section */}
-      <div className="text-center bg-white p-6 mt-12">
-        <h1 className="text-3xl font-bold text-[#3d226d]">Your online success starts here</h1>
-        <p className="text-gray-600 mt-2">
-          Choose from a wide variety of products and services to grow your idea online.
-        </p>
-        
-        <div className="flex justify-center gap-4 mt-4">
-          {categories.map((category, index) => (
-            <button
-              key={index}
-              className={`px-4 py-2 rounded-full text-[#3d226d] bg-gray-100 hover:bg-[#3d226d] hover:text-white transition ${category.active ? 'bg-[#3d226d] text-white' : ''}`}
-            >
-              {category.name}
-            </button>
-          ))}
-        </div>
-      </div>
     </div>
   );
 };
+
+
 
 const plans = [
   {

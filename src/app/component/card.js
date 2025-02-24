@@ -4,21 +4,21 @@ const testimonials = [
   {
     name: "Charlie Low",
     role: "Co-founder of Nohma",
-    image: "/w=1760,sharpen=1 (10).avif", // Replace with actual image URL
+    image: "/w=1760,sharpen=1 (10).avif",
     rating: 5,
     text: "Ever since we've been with Hostinger, it's been amazing. We've not really had any issues at all and if we ever do have a question, their customer service is incredible.",
   },
   {
     name: "Jack Bies",
     role: "Creative director",
-    image: "/w=1760,sharpen=1 (9).avif", // Replace with actual image URL
+    image: "/w=1760,sharpen=1 (9).avif",
     rating: 5,
     text: "Hostinger’s Customer Success team goes above and beyond to understand my problem.",
   },
   {
     name: "Jhon Ortega",
     role: "Entrepreneur",
-    image: "/w=1760,sharpen=1 (8).avif", // Replace with actual image URL
+    image: "/w=1760,sharpen=1 (8).avif",
     rating: 5,
     text: "I was looking for a hosting company that is very intuitive for beginners and very well-configured for good performance.",
   },
@@ -26,11 +26,12 @@ const testimonials = [
 
 export default function Card() {
   return (
-    <section className="py-12 bg-white text-center">
+    <section className="py-12 bg-white text-center overflow-hidden">
       <h2 className="text-2xl md:text-3xl font-bold text-indigo-700 mb-6">
         Trusted by 3+ million website owners worldwide
       </h2>
-      <div className="container mx-auto grid gap-6 md:grid-cols-3 px-4">
+
+      <div className="container mx-auto grid gap-6 md:grid-cols-3 px-4 max-w-6xl">
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
@@ -61,11 +62,13 @@ export default function Card() {
           </div>
         ))}
       </div>
+
       <button className="mt-6 px-6 py-3 bg-indigo-600 text-white rounded-lg shadow-md hover:bg-indigo-700 transition">
         Read more stories
       </button>
 
-      <div className="container mx-auto flex flex-col md:flex-row items-center mt-12 px-4">
+      {/* 24/7 Support Section */}
+      <div className="container mx-auto flex flex-col md:flex-row items-center mt-12 px-4 max-w-6xl">
         <div className="md:w-1/2 text-left">
           <h2 className="text-2xl md:text-3xl font-bold text-indigo-700 mb-4">Here to help 24/7</h2>
           <ul className="text-gray-600 space-y-2">
@@ -74,19 +77,17 @@ export default function Card() {
             <li>✔ Spend less time waiting, our speedy support team typically responds in under 2 minutes</li>
           </ul>
         </div>
+
         <div className="md:w-1/2 flex justify-center">
           <Image
-            src="/w=1760,sharpen=1 (11).avif" // Replace with actual image URL
+            src="/w=1760,sharpen=1 (11).avif"
             alt="Support Chat"
             width={500}
             height={300}
-            className="rounded-lg shadow-lg"
+            className="rounded-lg shadow-lg w-full h-auto object-cover max-w-sm md:max-w-md lg:max-w-lg"
           />
         </div>
-        
       </div>
     </section>
-
-    
   );
 }

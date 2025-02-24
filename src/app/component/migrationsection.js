@@ -4,7 +4,7 @@ import { BoltIcon, ClipboardDocumentListIcon, CheckBadgeIcon } from '@heroicons/
 
 export default function MigrationSection() {
   return (
-    <section className="bg-[#1a1234] max-w-full text-white py-16 px-6 text-center">
+    <section className="bg-[#1a1234] w-full max-w-full text-white py-16 px-6 text-center overflow-hidden">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold">Website migration. Made simple.</h2>
         <p className="mt-4 text-lg text-gray-300">
@@ -14,9 +14,10 @@ export default function MigrationSection() {
         </p>
       </div>
 
-      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      {/* Cards Section */}
+      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
         {/* Card 1 */}
-        <div className="bg-[#2b1b54] p-6 rounded-xl flex flex-col items-center text-center shadow-lg">
+        <div className="bg-[#2b1b54] p-6 rounded-xl flex flex-col items-center text-center shadow-lg w-full">
           <ClipboardDocumentListIcon className="w-12 h-12 text-purple-400" />
           <h3 className="mt-4 text-xl font-semibold">3 simple steps</h3>
           <p className="mt-2 text-gray-300">
@@ -25,7 +26,7 @@ export default function MigrationSection() {
         </div>
 
         {/* Card 2 */}
-        <div className="bg-[#2b1b54] p-6 rounded-xl flex flex-col items-center text-center shadow-lg">
+        <div className="bg-[#2b1b54] p-6 rounded-xl flex flex-col items-center text-center shadow-lg w-full">
           <BoltIcon className="w-12 h-12 text-purple-400" />
           <h3 className="mt-4 text-xl font-semibold">Fast and secure</h3>
           <p className="mt-2 text-gray-300">
@@ -34,7 +35,7 @@ export default function MigrationSection() {
         </div>
 
         {/* Card 3 */}
-        <div className="bg-[#2b1b54] p-6 rounded-xl flex flex-col items-center text-center shadow-lg">
+        <div className="bg-[#2b1b54] p-6 rounded-xl flex flex-col items-center text-center shadow-lg w-full">
           <CheckBadgeIcon className="w-12 h-12 text-purple-400" />
           <h3 className="mt-4 text-xl font-semibold">Free</h3>
           <p className="mt-2 text-gray-300">

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function PromoSection() {
   return (
-    <section className="bg-white text-gray-900 px-4 sm:px-6 md:px-12 py-8 max-w-full flex flex-col md:flex-row items-center justify-center gap-12">
+    <section className="bg-white text-gray-900 px-4 sm:px-6 md:px-12 py-8 w-full flex flex-col md:flex-row items-center justify-center gap-12 overflow-hidden">
       {/* Left Side: Text Content */}
       <div className="max-w-lg w-full text-center md:text-left space-y-4">
         <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-[#3d226d] leading-tight">
@@ -46,7 +46,7 @@ export default function PromoSection() {
           width={500}
           height={300}
           alt="Website builder UI"
-          className="w-full h-auto object-cover rounded-lg"
+          className="w-full max-w-full h-auto object-contain rounded-lg"
           priority
         />
       </div>
